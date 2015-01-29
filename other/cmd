@@ -1,0 +1,9 @@
+# for network
+sudo dhclient
+
+# for sound 
+sudo alsa force-reload
+
+# mount disk
+sudo fdisk -l
+sudo mount -t ntfs /dev/sdb1 /mnt/123

@@ -1,0 +1,23 @@
+tcpdump  host 192.168.1.209 and tcp port 443
+sudo tcpdump  host 192.168.1.209 and tcp port 443
+sudo tcpdump -XvvennSs host 192.168.1.209 and tcp port 443 
+sudo tcpdump -vv -XvvennSs host 192.168.1.209 and tcp port 443 
+sudo tcpdump -XvvennSs host 192.168.1.209 and tcp port 443 
+sudo tcpdump -XvvennSs 0 host 192.168.1.209 and tcp port 443 
+sudo tcpdump -XvvennSs 0 host 192.168.1.209 and tcp port 443  >https.log
+sudo tcpdump -XvvennSs 0 host 192.168.1.209 and tcp port 443  -w https.2.log 
+sudo tcpdump -r https.2.log  -n -s 0 
+sudo tcpdump -r https.2.log  -n -s 0  -w _
+sudo tcpdump -r https.2.log  -n -s 0  -w -
+sudo tcpdump -r https.2.log  -n -s 0  -w - | strings 
+sudo tcpdump -r https.2.log  -n -s 0  -w - | strings  | less
+sudo tcpdump Ss host 192.168.1.209 and tcp port 443
+sudo tcpdump -s 0  host 192.168.1.209 and tcp port 443 -w -
+sudo tcpdump -s 0  host 192.168.1.209 and tcp port 443 -w - | strings 
+sudo tcpdump -i eth1 -s 0  host 192.168.1.209 and tcp port 443 -w - | strings 
+sudo tcpdump -i eth1 -s 0  host 192.168.1.209 and tcp port 80 -w - | strings 
+sudo tcpdump -i eth1 -s 0  host 192.168.1.209 and tcp port 80 -w - | strings  | grep user
+sudo tcpdump -i eth1 -s 0  host 192.168.1.209 and tcp port 80 -w - | strings  
+sudo tcpdump -i eth1 -s 0  host 192.168.1.209 and tcp port 80 -w - | strings  | grep 5
+history  | grep tcpdump
+
